@@ -1,0 +1,18 @@
+
+
+.histogram-header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.histogram-header__item-right{
+    display: block;
+    color: var(--blue-2);
+    text-align: right;
+    padding-top: 3px;
+}
