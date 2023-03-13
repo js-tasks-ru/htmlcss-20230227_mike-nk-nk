@@ -1,0 +1,13 @@
+.counter{
+    color: var(--black);
+}
+
+.counter__label{
+
+}
+
+.counter__value{
+    padding-top: 6px;
+    font-size: 20px;
+    line-height: 26px;
+}

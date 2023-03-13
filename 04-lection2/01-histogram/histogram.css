@@ -1,0 +1,21 @@
+@import './chart.css';
+@import './counter.css';
+@import './histogram-header.css';
+
+.histogram{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--white);
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+}
+
+.histogram__header{
+    padding: 16px 24px 0px 24px;
+}
+
+.histogram__chart{
+    height: 50px;
+    padding: 0px 29px 24px 24px;
+}

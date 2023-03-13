@@ -1,0 +1,8 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 30px;
+    padding: 68px 165px 68px 165px;
+    background-color: var(--grey-1);
+}
