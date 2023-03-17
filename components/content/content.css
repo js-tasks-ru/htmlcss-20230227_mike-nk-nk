@@ -1,8 +1,9 @@
 .content{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     flex-grow: 1;
     gap: 30px;
-    padding: 68px 165px 68px 165px;
+    padding: 68px;
     background-color: var(--grey-1);
 }

@@ -3,19 +3,53 @@
 @import './histogram-header.css';
 
 .histogram{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background: var(--white);
     border: 1px solid var(--grey-3);
     border-radius: 8px;
+    padding: 16px 24px 24px 24px;
 }
 
 .histogram__header{
-    padding: 16px 24px 0px 24px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 39px;
+ }
+    
+.histogram-header__link{
+    color: var(--blue-2);
+    text-align: right;
+    padding-top: 3px;
 }
 
 .histogram__chart{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1px;
     height: 50px;
-    padding: 0px 29px 24px 24px;
+    padding-right: 5px;
+    padding-left: 2px;
+}
+
+.histogram__chart-item{
+    flex-basis:100%;         
+    background: var(--blue-2);
+};
+
+.histogram__counter{
+    color: var(--black);
+}
+
+.histogram__counter-value{
+    padding-top: 6px;
+    font-size: 20px;
+    line-height: 26px;
 }
