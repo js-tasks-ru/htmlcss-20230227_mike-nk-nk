@@ -3,7 +3,6 @@
 .accordion{
     display: block;
     background: var(--white);
-    max-width: 730px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -28,11 +27,16 @@
 }
 
 .accordion__item[open]{
-    /*color:red;*/
+    padding-bottom: 32px;
+}
+
+.accordion__item[open] .accordion__summary{
+    padding-bottom: 16px;
 }
 
 .accordion__summary{
     color: var(--black); 
+    list-style: none;
 }
 
 .accordion__summary::marker {
