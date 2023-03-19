@@ -23,6 +23,10 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --blue-2: #4263EB;
+    --blue-3: #A0B1F533;
+    --grey-5: #334D6E;
 }
 
 * {
