@@ -11,7 +11,7 @@
 
 
 .modal__window{
-    /* width: 428px; height: 294px; */
+    max-width: 428px; 
     box-sizing: border-box;
     position:absolute;
     left: 50%;
