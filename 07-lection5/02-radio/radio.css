@@ -56,6 +56,12 @@
     border-width: 2px;
 }
 
+.radio__input:focus ~ .radio__state
+.radio__label{
+    text-decoration: underline;
+}
+
+
 .radio__input:disabled ~ .radio__state
 .radio__control{
     background: var(--grey-2);
