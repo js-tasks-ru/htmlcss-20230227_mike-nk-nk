@@ -1,10 +1,12 @@
-@import '../fonts/fonts.css';
 
 @import './normalize.css';
+@import '../fonts/fonts.css';
+
 @import '../../components/footer/footer.css';
 @import '../../components/header/header.css';
-@import '../../components/main/main.css';
+@import '../../components/content/content.css';
 @import '../../components/page/page.css';
+@import '../../components/card/card.css';
 
 :root {
     --white: #ffffff;
@@ -27,6 +29,17 @@
     --blue-2: #4263EB;
     --blue-3: #A0B1F533;
     --grey-5: #334D6E;
+
+    --primary-hover: #2342C0;
+    --secondary-hover: #5028C6;
+
+    --alternate: var(--white); /*transparent ?*/
+    --black-2: #495057;
+
+    --blue-2: #4263EB;
+
+    --background-linear-gradient-gray: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
+
 }
 
 * {
