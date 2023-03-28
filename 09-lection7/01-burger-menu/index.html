@@ -4,9 +4,62 @@
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./burger-menu.css">
+        <link rel="stylesheet" href="../../07-lection5/03-toggler/toggler.css">
         <script defer src="./burger-menu.js"></script>
     </head>
     <body>
 
+        <svg xmlns="http://www.w3.org/2000/svg" display="none">
+            <defs>
+                <symbol id="close" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18" stroke="#212429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#212429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </symbol>
+            </defs>
+        </svg>
+
+        <button id="burger-menu-open" class="button">Open modal</button>
+        <br>
+
+        <div id="burger-menu" class="burger-menu">
+            <div class="burger-menu__window">
+                <div class="burger-menu__header">
+                    <div class="burger-menu__header-close" id="burger-menu-close">
+                        <svg  class="burger-menu__header-close-icon">
+                            <use href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="burger-menu__header-rect"></div>                 
+                    <div class="burger-menu__header-circle"></div>                 
+                    <div class="burger-menu__header-triangle"></div>               
+                </div>
+                <div class="burger-menu__content">
+                    <div class="burger-menu__item burger-menu__item_separator"></div>
+                    <div class="burger-menu__item burger-menu__item_checkbox">
+                        <div>Dark mode</div>
+                        <label class="toggler">
+                            <input type="checkbox" class="toggler__input">
+                            <div class="toggler__state">
+                                <div class="toggler__control">
+                                    <div class="toggler__icon">  
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="burger-menu__item burger-menu__item_separator"></div>
+                    <div class="burger-menu__item burger-menu__item_title">Components</div>
+                    <div class="burger-menu__item">Modal</div>           
+                    <div class="burger-menu__item burger-menu__item_selected">Tooltip</div>           
+                    <div class="burger-menu__item">Avatar</div>           
+                    <div class="burger-menu__item">Calendar</div>           
+                    <div class="burger-menu__item">Histogram</div>           
+                    <div class="burger-menu__item">Custom form elements</div>           
+                    <div class="burger-menu__item burger-menu__item_none"></div>           
+                    <div class="burger-menu__item burger-menu__item_none"></div>                  
+                    <div class="burger-menu__item">Main page</div>  
+                </div>
+            </div>
+        </div>
     </body>
 </html>

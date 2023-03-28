@@ -1,0 +1,122 @@
+.burger-menu{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F0F0F0F0; 
+    transform: translateX(-100vw);
+    transition: transform 250ms linear; /*обратно тоже медленно*/
+}
+
+.burger-menu[data-open]{
+    transform: translateX(0);
+}
+
+.burger-menu__window{
+    display:inline-block;
+    min-width: 375px;
+    background: var(--white);
+}
+
+@media (min-width: 768px) {
+    .burger-menu
+    {
+        display: none;
+    }
+}
+
+.burger-menu__header{
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+}
+
+.burger-menu__header-rect{
+    width:30px;
+    height:30px;
+    background: var(--black);
+}
+
+.burger-menu__header-circle{
+    width:32px;
+    height:32px;
+    border-radius: 16px;
+    background: var(--black);
+}
+
+.burger-menu__header-triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 32px 0 0 32px;
+    border-color: transparent transparent transparent var(--black);
+}
+
+.burger-menu__header-close{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background:var(--grey-2);
+    left: 12px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.burger-menu__header-close-icon{
+    margin: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.burger-menu__content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.burger-menu__item{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.burger-menu__item_title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--grey-3);
+    margin-top: 8px;
+}
+
+.burger-menu__item_separator{
+    background: var(--grey-2);
+    height: 1px;
+}
+
+.burger-menu__item_selected{
+    color: var(--secondary); /*текущее состояние main.css не понятно...*/
+}
+
+.burger-menu__item_none{
+    height: 12px;
+}
+
+.burger-menu__item_checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
