@@ -25,6 +25,7 @@
 }
 
 .input__label{
+    display: block;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
