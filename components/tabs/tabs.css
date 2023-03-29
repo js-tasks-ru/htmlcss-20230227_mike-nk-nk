@@ -1,0 +1,14 @@
+
+.tabs{
+}
+
+/*
+.tabs input{
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+*/
+
+.tabs input[checked]{
+    color:red;
+}
