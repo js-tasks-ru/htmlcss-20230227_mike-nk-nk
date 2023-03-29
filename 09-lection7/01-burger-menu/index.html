@@ -4,7 +4,7 @@
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./burger-menu.css">
-        <link rel="stylesheet" href="../../07-lection5/03-toggler/toggler.css">
+        <link rel="stylesheet" href="./logo.css">
         <script defer src="./burger-menu.js"></script>
     </head>
     <body>
@@ -24,39 +24,28 @@
         <div id="burger-menu" class="burger-menu">
             <div class="burger-menu__window">
                 <div class="burger-menu__header">
-                    <div class="burger-menu__header-close" id="burger-menu-close">
+                    <button class="burger-menu__header-close" id="burger-menu-close">
                         <svg  class="burger-menu__header-close-icon">
                             <use href="#close"></use>
                         </svg>
-                    </div>
-                    <div class="burger-menu__header-rect"></div>                 
-                    <div class="burger-menu__header-circle"></div>                 
-                    <div class="burger-menu__header-triangle"></div>               
+                    </button>
+                    <div class="logo">
+                        <div class="logo__rect"></div>                 
+                        <div class="logo__circle"></div>                 
+                        <div class="logo__triangle"></div>
+                    </div>               
                 </div>
                 <div class="burger-menu__content">
-                    <div class="burger-menu__item burger-menu__item_separator"></div>
-                    <div class="burger-menu__item burger-menu__item_checkbox">
-                        <div>Dark mode</div>
-                        <label class="toggler">
-                            <input type="checkbox" class="toggler__input">
-                            <div class="toggler__state">
-                                <div class="toggler__control">
-                                    <div class="toggler__icon">  
-                                    </div>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="burger-menu__item burger-menu__item_separator"></div>
-                    <div class="burger-menu__item burger-menu__item_title">Components</div>
+                    <div class="burger-menu__item-separator"></div>
+                    <div class="burger-menu__item-title"><h2>Components</h2></div>
                     <div class="burger-menu__item">Modal</div>           
-                    <div class="burger-menu__item burger-menu__item_selected">Tooltip</div>           
+                    <div class="burger-menu__item-selected">Tooltip</div>           
                     <div class="burger-menu__item">Avatar</div>           
                     <div class="burger-menu__item">Calendar</div>           
                     <div class="burger-menu__item">Histogram</div>           
                     <div class="burger-menu__item">Custom form elements</div>           
-                    <div class="burger-menu__item burger-menu__item_none"></div>           
-                    <div class="burger-menu__item burger-menu__item_none"></div>                  
+                    <div class="burger-menu__item-none"></div>           
+                    <div class="burger-menu__item-none"></div>                  
                     <div class="burger-menu__item">Main page</div>  
                 </div>
             </div>

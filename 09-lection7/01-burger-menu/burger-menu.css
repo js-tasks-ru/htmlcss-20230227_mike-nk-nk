@@ -33,28 +33,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 8px;
-}
-
-.burger-menu__header-rect{
-    width:30px;
-    height:30px;
-    background: var(--black);
-}
-
-.burger-menu__header-circle{
-    width:32px;
-    height:32px;
-    border-radius: 16px;
-    background: var(--black);
-}
-
-.burger-menu__header-triangle{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 32px 0 0 32px;
-    border-color: transparent transparent transparent var(--black);
 }
 
 .burger-menu__header-close{
@@ -62,14 +40,15 @@
     width: 32px;
     height: 32px;
     border-radius: 16px;
-    background:var(--grey-2);
+    border: none;
+    background: var(--grey-2);
     left: 12px;
     top: 16px;
+    padding: 4px 0 0 0;
     cursor: pointer;
 }
 
 .burger-menu__header-close-icon{
-    margin: 4px;
     width: 24px;
     height: 24px;
 }
@@ -79,44 +58,32 @@
     flex-direction: column;
     gap: 16px;
     padding: 16px;
-}
-
-.burger-menu__item{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+}
+
+.burger-menu__item{
     color: var(--black);
 }
 
-.burger-menu__item_title{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
+.burger-menu__item-title{
     color: var(--grey-3);
     margin-top: 8px;
 }
 
-.burger-menu__item_separator{
+.burger-menu__item-separator{
     background: var(--grey-2);
     height: 1px;
 }
 
-.burger-menu__item_selected{
+.burger-menu__item-selected{
     color: var(--secondary); /*текущее состояние main.css не понятно...*/
 }
 
-.burger-menu__item_none{
+.burger-menu__item-none{
     height: 12px;
 }
 
-.burger-menu__item_checkbox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
