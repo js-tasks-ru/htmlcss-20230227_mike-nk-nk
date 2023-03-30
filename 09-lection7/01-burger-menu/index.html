@@ -4,9 +4,51 @@
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./burger-menu.css">
+        <link rel="stylesheet" href="./logo.css">
         <script defer src="./burger-menu.js"></script>
     </head>
     <body>
 
+        <svg xmlns="http://www.w3.org/2000/svg" display="none">
+            <defs>
+                <symbol id="close" viewBox="0 0 24 24">
+                    <path d="M18 6L6 18" stroke="#212429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#212429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </symbol>
+            </defs>
+        </svg>
+
+        <button id="burger-menu-open" class="button">Open modal</button>
+        <br>
+
+        <div id="burger-menu" class="burger-menu">
+            <div class="burger-menu__window">
+                <div class="burger-menu__header">
+                    <button class="burger-menu__header-close" id="burger-menu-close">
+                        <svg  class="burger-menu__header-close-icon">
+                            <use href="#close"></use>
+                        </svg>
+                    </button>
+                    <div class="logo">
+                        <div class="logo__rect"></div>                 
+                        <div class="logo__circle"></div>                 
+                        <div class="logo__triangle"></div>
+                    </div>               
+                </div>
+                <div class="burger-menu__content">
+                    <div class="burger-menu__item-separator"></div>
+                    <div class="burger-menu__item-title"><h2>Components</h2></div>
+                    <div class="burger-menu__item">Modal</div>           
+                    <div class="burger-menu__item-selected">Tooltip</div>           
+                    <div class="burger-menu__item">Avatar</div>           
+                    <div class="burger-menu__item">Calendar</div>           
+                    <div class="burger-menu__item">Histogram</div>           
+                    <div class="burger-menu__item">Custom form elements</div>           
+                    <div class="burger-menu__item-none"></div>           
+                    <div class="burger-menu__item-none"></div>                  
+                    <div class="burger-menu__item">Main page</div>  
+                </div>
+            </div>
+        </div>
     </body>
 </html>
