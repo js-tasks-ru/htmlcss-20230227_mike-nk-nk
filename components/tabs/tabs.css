@@ -1,14 +1,114 @@
 
 .tabs{
+    width: 100%;
 }
 
-/*
 .tabs input{
     position: absolute;
     clip: rect(0, 0, 0, 0);
 }
-*/
 
-.tabs input[checked]{
-    color:red;
+.tabs__scroller{
+    display: flex;
+    gap: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-3);
+    border-bottom: 1px solid var(--grey-2);
+    padding: 0 16px 0px 16px;
+}
+
+.tabs__scroller label{
+    padding-bottom: 8px;
+    /*border-bottom: 5px solid var(--black);
+    border-color: transparent;*/
+    cursor: pointer;
+    position: relative;
+}
+
+.tabs__scroller label:after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    background: var(--black);
+    transform: scaleX(0);
+    transition: transform 0.1s ease;
+}
+
+input:hover#tab-1 ~ .tabs__scroller label:nth-child(1),
+input:checked#tab-1 ~ .tabs__scroller label:nth-child(1) 
+{
+    color: var(--black);
+}
+
+input:hover#tab-1 ~ .tabs__scroller label:nth-child(1):after,
+input:checked#tab-1 ~ .tabs__scroller label:nth-child(1):after 
+{
+    transform: scaleX(1);
+}
+
+input:hover#tab-2 ~ .tabs__scroller label:nth-child(2), 
+input:checked#tab-2 ~ .tabs__scroller label:nth-child(2) {
+    color: var(--black);
+}
+
+input:hover#tab-2 ~ .tabs__scroller label:nth-child(2):after,
+input:checked#tab-2 ~ .tabs__scroller label:nth-child(2):after 
+{
+    transform: scaleX(1);
+}
+
+input:hover#tab-3 ~ .tabs__scroller label:nth-child(3), 
+input:checked#tab-3 ~ .tabs__scroller label:nth-child(3) {
+    color: var(--black);
+}
+
+input:hover#tab-3 ~ .tabs__scroller label:nth-child(3):after,
+input:checked#tab-3 ~ .tabs__scroller label:nth-child(3):after 
+{
+    transform: scaleX(1);
+}
+
+input:hover#tab-4 ~ .tabs__scroller label:nth-child(4),
+input:checked#tab-4 ~ .tabs__scroller label:nth-child(4) {
+    color: var(--black);
+}
+
+input:hover#tab-4 ~ .tabs__scroller label:nth-child(4):after,
+input:checked#tab-4 ~ .tabs__scroller label:nth-child(4):after 
+{
+    transform: scaleX(1);
+}
+
+.tabs__content{
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 30px;
+    background-color: var(--grey-1);
+    padding: 32px 16px 32px 16px;
+}
+
+input:checked#tab-1 ~ .tabs__content_1 {
+    display: flex;
+}
+
+input:checked#tab-2 ~ .tabs__content_2 {
+    display: flex;
+}
+
+input:checked#tab-3 ~ .tabs__content_3 {
+    display: flex;
+}
+
+input:checked#tab-4 ~ .tabs__content_4 {
+    display: flex;
 }
