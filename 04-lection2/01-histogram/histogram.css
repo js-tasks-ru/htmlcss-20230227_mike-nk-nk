@@ -24,6 +24,28 @@
     padding-top: 3px;
 }
 
+/*
+@keyframes kf-height {
+    from { 
+        height: 0px;
+        padding-top: 50px; 
+    }  
+    to { 
+        height: 50px;
+        padding-top: 0px;
+    } 
+ }
+*/
+
+@keyframes kf-height {
+    from { 
+        transform: scaleY(0); 
+    }  
+    to {
+        transform: scaleY(100%);
+    }
+}
+
 .histogram__chart{
     display: flex;
     flex-direction: row;
@@ -32,6 +54,8 @@
     height: 50px;
     padding-right: 5px;
     padding-left: 2px;
+    transform-origin: bottom;
+    animation: kf-height 0.3s;
 }
 
 .histogram__chart-item{
