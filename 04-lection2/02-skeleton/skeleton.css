@@ -32,9 +32,19 @@
     padding-left: 16px;
 }
 
+@keyframes kf-height {
+    from { 
+        background-position:0px 0px;
+    }  
+    to {
+        background-position: 300px 0px;
+    }
+}
+
 .skeleton__line{
     background: var(--background-linear-gradient-gray);
     height: 20px;
+    animation: kf-height 3s infinite alternate;
 }
 
 .skeleton__line_small{
