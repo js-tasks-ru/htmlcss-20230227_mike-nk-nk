@@ -4,6 +4,5 @@
     justify-content: center;
     flex-grow: 1;
     gap: 30px;
-    padding-top: 68px;
-    background-color: var(--grey-1);
+    background: var(--grey-1);
 }

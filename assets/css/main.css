@@ -7,6 +7,12 @@
 @import '../../components/content/content.css';
 @import '../../components/page/page.css';
 @import '../../components/card/card.css';
+@import '../../components/logo/logo.css';
+@import '../../components/tabs/tabs.css';
+@import '../../components/toggler/toggler.css';
+@import '../../components/theme-changer/theme-changer.css';
+@import '../../components/burger-menu/burger-menu.css';
+
 
 :root {
     --white: #ffffff;
@@ -37,6 +43,33 @@
     --background-linear-gradient-gray: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
 
 }
+
+html[data-theme-dark]{
+
+    --white: #000000;
+    --black: #FFFFFF;
+    --pink: #fbb3cc;
+    --purple: #b3a1ec;
+    --blue: #4765fa;
+    --red: #f88686;
+    --grey-4: #F8F9FA;
+    --grey-3: #DDE2E5;
+    --grey-2: #ACB5BD;
+    --grey-1: #495057;
+
+    --primary-hover: #e3e7f7;
+    --secondary-hover: #cfc2fa;
+
+    --black-2: #DDE2E5;
+
+    --blue-2: #b4c2fc;
+
+    /*test*/
+    background: var(--white);
+    color: var(--black);
+}
+
+
 
 * {
     font-family: 'Roboto', sans-serif;

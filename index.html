@@ -6,16 +6,92 @@
     </head>
     <body>
         <div class="page">
-            <header class="header">Header</header>
+            <header class="header">
+                <svg class="header__burger-menu-open" id="burger-menu-open">
+                    <use href="./assets/images/sprite.svg#menu"></use>
+                </svg>
+                <div class="logo header__logo">
+                    <div class="logo__rect"></div>                 
+                    <div class="logo__circle"></div>                 
+                    <div class="logo__triangle"></div>
+                </div>   
+                <div class="header__theme">
+                    <label class="toggler theme-changer">
+                        <svg class="theme-changer__icon">
+                            <use href="./assets/images/sprite.svg#sun"></use>
+                        </svg>
+                        <input type="checkbox" class="toggler__input" id="theme-changer">
+                        <div class="toggler__state">
+                            <div class="toggler__control">
+                                <div class="toggler__icon">  
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="theme-changer__icon">
+                            <use href="./assets/images/sprite.svg#moon"></use>
+                        </svg>
+                    </label>                    
+                </div>
+                <div class="header__title">Reusable component library</div>
+                <div id="burger-menu" class="burger-menu">
+                    <div class="burger-menu__window">
+                        <div class="burger-menu__header">
+                            <button class="burger-menu__header-close" id="burger-menu-close">
+                                <svg  class="burger-menu__header-close-icon">
+                                    <use href="./assets/images/sprite.svg#close"></use>
+                                </svg>
+                            </button>
+                            <div class="logo">
+                                <div class="logo__rect"></div>                 
+                                <div class="logo__circle"></div>                 
+                                <div class="logo__triangle"></div>
+                            </div> 
+                        </div>
+                        <div class="burger-menu__content">
+                            <div class="burger-menu__item-separator"></div>
+                            <div class="burger-menu__item-title"><h2>Components</h2></div>
+                            <div class="burger-menu__item">Modal</div>           
+                            <div class="burger-menu__item-selected">Tooltip</div>           
+                            <div class="burger-menu__item">Avatar</div>           
+                            <div class="burger-menu__item">Calendar</div>           
+                            <div class="burger-menu__item">Histogram</div>           
+                            <div class="burger-menu__item">Custom form elements</div>           
+                            <div class="burger-menu__item-none"></div>           
+                            <div class="burger-menu__item-none"></div>                  
+                            <div class="burger-menu__item">Main page</div>  
+                        </div>
+                    </div>
+                </div>
+            </header>
             <main class="content">
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
+                <div class="tabs">
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-1" checked>
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-2">
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-3">
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-4">
+                
+                    <div class="tabs__scroller">
+                        <label class="tabs__label tabs__label_1" for="tab-1">All components</label>
+                        <label class="tabs__label tabs__label_2" for="tab-2">Atoms</label>
+                        <label class="tabs__label tabs__label_3" for="tab-3">Molecules</label>
+                        <label class="tabs__label tabs__label_4" for="tab-4">Organisms</label>
+                    </div>
+
+                    <div class="tabs__content">
+                        <card class="card tabs__content_1 tabs__content_2">12</card>
+                        <card class="card tabs__content_1 tabs__content_2">12</card>
+                        <card class="card tabs__content_1">1</card>
+                        <card class="card tabs__content_1">1</card>
+                        <card class="card tabs__content_1 tabs__content_2 tabs__content_3">123</card>
+                        <card class="card tabs__content_4 tabs__content_2">24</card>
+                   </div>
+
+
+                </div>
             </main>
             <footer class="footer">Footer</footer>
         </div>
     </body>
+    <script defer src="./components/theme-changer/theme-changer.js"></script>
+    <script defer src="./components/burger-menu/burger-menu.js"></script>
 </html>
