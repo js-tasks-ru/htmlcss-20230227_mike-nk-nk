@@ -89,7 +89,7 @@ input:checked#tab-4 ~ .tabs__scroller .tabs__label_4:after
 
 .tabs__content{
     width: 100%;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-grow: 1;
@@ -98,18 +98,25 @@ input:checked#tab-4 ~ .tabs__scroller .tabs__label_4:after
     padding: 32px 16px 32px 16px;
 }
 
-input:checked#tab-1 ~ .tabs__content_1 {
-    display: flex;
+.tabs__content_1,
+.tabs__content_2,
+.tabs__content_3,
+.tabs__content_4{
+    display: none;
 }
 
-input:checked#tab-2 ~ .tabs__content_2 {
-    display: flex;
+input:checked#tab-1 ~ .tabs__content .tabs__content_1 {
+    display: block;
 }
 
-input:checked#tab-3 ~ .tabs__content_3 {
-    display: flex;
+input:checked#tab-2 ~ .tabs__content .tabs__content_2 {
+    display: block;
 }
 
-input:checked#tab-4 ~ .tabs__content_4 {
-    display: flex;
+input:checked#tab-3 ~ .tabs__content .tabs__content_3 {
+    display: block;
+}
+
+input:checked#tab-4 ~ .tabs__content .tabs__content_4 {
+    display: block;
 }
