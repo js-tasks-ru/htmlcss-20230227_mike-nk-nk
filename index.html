@@ -8,12 +8,31 @@
         <div class="page">
             <header class="header">Header</header>
             <main class="content">
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
-                <card class="card"></card>
+
+                <div class="tabs">
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-1" checked>
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-2">
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-3">
+                    <input type="radio" name="main-tab" class="tabs__input" id="tab-4">
+                
+                    <div class="tabs__scroller">
+                        <label class="tabs__label tabs__label_1" for="tab-1">All components</label>
+                        <label class="tabs__label tabs__label_2" for="tab-2">Atoms</label>
+                        <label class="tabs__label tabs__label_3" for="tab-3">Molecules</label>
+                        <label class="tabs__label tabs__label_4" for="tab-4">Organisms</label>
+                    </div>
+
+                    <div class="tabs__content">
+                        <card class="card tabs__content_1 tabs__content_2">12</card>
+                        <card class="card tabs__content_1 tabs__content_2">12</card>
+                        <card class="card tabs__content_1">1</card>
+                        <card class="card tabs__content_1">1</card>
+                        <card class="card tabs__content_1 tabs__content_2 tabs__content_3">123</card>
+                        <card class="card tabs__content_4 tabs__content_2">24</card>
+                   </div>     
+
+                </div>
+
             </main>
             <footer class="footer">Footer</footer>
         </div>
