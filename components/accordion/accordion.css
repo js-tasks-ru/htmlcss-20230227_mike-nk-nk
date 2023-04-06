@@ -2,13 +2,12 @@
 
 .accordion{
     display: block;
-    background: var(--white);
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: var(--gray-4);
+    color: var(--grey-4);
 }
 
 /* можно вынести и в  accordion__item.css, accordion__summary.css*/
@@ -20,6 +19,7 @@
     border-radius: 8px;
     padding: 24px 32px 24px 32px;
     margin-bottom: 8px;
+    background: var(--white);
 }
 
 .accordion__item:last-child {
@@ -32,8 +32,41 @@
 }
 
 .accordion__summary{
+    position: relative;
     color: var(--black); 
     list-style: none;
+    background: var(--white);
+}
+
+.accordion__summary-icon-open{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.accordion__summary-icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+details[open] .accordion__summary-icon-close{
+    display: inline-block;
+}
+
+details:not([open]) .accordion__summary-icon-close{
+    display: none;
+}
+
+
+details[open] .accordion__summary-icon-open{
+    display: none;
+}
+
+details:not([open]) .accordion__summary-icon-open{
+    display: inline-block;
 }
 
 .accordion__summary::marker {

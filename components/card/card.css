@@ -26,7 +26,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    border: 1px solid black;
 }
 
 .card__content-center{
@@ -36,7 +35,6 @@
     align-items: center;
     flex-grow: 1;
     margin: 16px;
-    border: 1px solid red;
 }
 
 .card__content-resize{
@@ -45,7 +43,6 @@
     display: block;
     flex-grow: 1;
     margin: 16px;
-    border: 1px solid blue;
 }
 
 .card__title{
@@ -129,7 +126,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
 }
 
 .card__title-big{
