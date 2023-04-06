@@ -1,0 +1,43 @@
+/* Стилизация аккордеона */
+
+.accordion{
+    display: block;
+    background: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-4);
+}
+
+/* можно вынести и в  accordion__item.css, accordion__summary.css*/
+
+.accordion__item{
+    display: block;
+    color: var(--grey-4); 
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    padding: 24px 32px 24px 32px;
+    margin-bottom: 8px;
+}
+
+.accordion__item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion__content {
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.accordion__summary{
+    color: var(--black); 
+    list-style: none;
+}
+
+.accordion__summary::marker {
+    content: "";
+    display: none;
+}
+
