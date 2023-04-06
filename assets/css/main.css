@@ -22,6 +22,7 @@
 @import '../../components/checkbox/checkbox.css';
 @import '../../components/calendar/calendar.css';
 @import '../../components/skeleton/skeleton.css';
+@import '../../components/accordion/accordion.css';
 
 :root {
     --white: #ffffff;
@@ -48,6 +49,7 @@
     --black-2: #495057;
 
     --blue-2: #4263EB;
+    --blue-3: #92a6f6;
 
     --background-linear-gradient-gray: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
 
@@ -72,6 +74,7 @@ html[data-theme-dark]{
     --black-2: #DDE2E5;
 
     --blue-2: #b4c2fc;
+    --blue-3: #dae0f5;
 
     /*test*/
     background: var(--white);

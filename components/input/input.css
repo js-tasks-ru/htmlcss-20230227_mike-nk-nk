@@ -48,7 +48,7 @@
 }
 
 .input_success .input__control{
-    border-color: var(--grey-2);
+    border-color: var(--blue);
 }
 
 .input_error .input__control{
