@@ -7,11 +7,11 @@
     height: 100vh;
     background-color: #F0F0F0F0; 
     transform: translateX(-100vw);
-    transition: transform 250ms linear; /*обратно тоже медленно*/
-}
+    }
 
 .burger-menu[data-open]{
     transform: translateX(0);
+    transition: transform 250ms linear; /*обратно тоже медленно*/
 }
 
 .burger-menu__window{
@@ -70,6 +70,8 @@
 
 .burger-menu__item{
     color: var(--black);
+    display: block;
+    text-decoration: none;
 }
 
 .burger-menu__item-title{
@@ -82,8 +84,8 @@
     height: 1px;
 }
 
-.burger-menu__item-selected{
-    color: var(--secondary); /*текущее состояние main.css не понятно...*/
+.burger-menu__item[selected]{
+    color: var(--red); 
 }
 
 .burger-menu__item-none{

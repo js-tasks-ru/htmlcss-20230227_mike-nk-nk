@@ -6,6 +6,13 @@
     padding: 72px 16px 130px 16px;
 }
 
+.footer_component{
+    background: var(--grey-1);
+    border: none;
+    color:var(--grey-3);
+    padding: 32px 16px;
+}
+
 .footer__title{
     margin-top: 24px;
     margin-bottom: 28px;
@@ -18,8 +25,5 @@
 
 @media (max-width: 768px) {
   
-    .footer{
-        padding-top: 8px;
-    }
 
 }

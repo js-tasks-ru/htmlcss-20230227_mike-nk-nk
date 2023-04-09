@@ -1,6 +1,9 @@
 .tabs{
-    width: 100%;
+    flex-grow: 1;
+    width: auto;
     background: var(--white);
+    display: flex;
+    flex-direction: column;
 }
 
 .tabs__input{
@@ -91,14 +94,22 @@ input:checked#tab-4 ~ .tabs__scroller .tabs__label_4:after
 }
 
 .tabs__content{
-    width: 100%;
+    width: auto;
+    flex-grow: 1;
+}
+
+.tabs__content_cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-grow: 1;
     gap: 30px;
-    background-color: var(--grey-1);
+    background: var(--grey-1);
     padding: 32px 16px 32px 16px;
+}
+
+.tabs__content_component{
+    background: var(--white);
+    position: relative;
 }
 
 .tabs__content_1,

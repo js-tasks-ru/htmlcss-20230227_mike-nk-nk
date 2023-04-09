@@ -1,10 +1,15 @@
 .card{
+    color:var(--black);
     display: block;
     width: 350px;
     height: 367px;
     background: var(--white);
     box-shadow: 0px 2px 4px var(--grey-4);
     border-radius: 12px;
+}
+
+a.card{
+    text-decoration: none;
 }
 
 .card_big{
@@ -35,6 +40,10 @@
     align-items: center;
     flex-grow: 1;
     margin: 16px;
+}
+
+.card__content-center_avatar{
+    width: 90%;
 }
 
 .card__content-resize{

@@ -4,11 +4,10 @@
     position: relative;
 }
 
-
 .tooltip__bubble:after{
     content: "";
     border: 8px solid transparent;
-    border-top-color: #4263EB;
+    border-top-color: var(--blue);
     position: absolute;
     top:calc(100% - 1px);
     left:50%;
@@ -23,7 +22,7 @@
     line-height: 24px;
     text-align: center;
     color:var(--grey-2);
-    background: #4263EB;
+    background: var(--blue);
     box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 10px;
     padding: 13px 21px 8px 21px;
@@ -31,12 +30,27 @@
     bottom:calc(100% + 9px);
     left:50%;
     transform: translateX(-50%);
-    display: none;
     user-select: none;
+    transform: scale(0,0);
+}
+
+@keyframes kf-tooltip {
+    0% { 
+        transform: scale(0,0);
+    }  
+    20% { 
+        transform: translateX(-50%) scale(0.2, 0.2);
+    } 
+    100% {
+        transform: translateX(-50%) scale(1, 1);
+    }
 }
 
 .tooltip__trigger:hover ~ .tooltip__bubble,
 .tooltip__trigger[demo] ~ .tooltip__bubble{
-    display: block;
+    transform-origin: bottom;
+    transform: scale(1,1);
+    transform: translateX(-50%);
+    animation: kf-tooltip 0.5s;
 }
 

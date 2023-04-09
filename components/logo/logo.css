@@ -1,6 +1,7 @@
 
 
 .logo {
+    display: block;
     height: 64px;
     display: flex;
     justify-content: center;
