@@ -1,17 +1,26 @@
-.tabs{
+.tabs {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     width: auto;
     background: var(--white);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
-.tabs__input{
+.tabs__input {
     position: absolute;
     clip: rect(0, 0, 0, 0);
 }
 
-.tabs__scroller{
+.tabs__scroller {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 40px;
     font-family: 'Inter';
@@ -25,7 +34,7 @@
     overflow-x: auto;
 }
 
-.tabs__label{
+.tabs__label {
     padding-bottom: 8px;
     /*border-bottom: 5px solid var(--black);
     border-color: transparent;*/
@@ -33,81 +42,88 @@
     position: relative;
 }
 
-.tabs__label:after{
-    content:"";
+.tabs__label:after {
+    content: '';
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 0;
     height: 5px;
     background: var(--black);
+    -webkit-transform: scaleX(0);
     transform: scaleX(0);
+    -webkit-transition: -webkit-transform 0.1s ease;
+    transition: -webkit-transform 0.1s ease;
     transition: transform 0.1s ease;
+    transition: transform 0.1s ease, -webkit-transform 0.1s ease;
 }
 
 input:hover#tab-1 ~ .tabs__scroller .tabs__label_1,
-input:checked#tab-1 ~ .tabs__scroller .tabs__label_1 
-{
+input:checked#tab-1 ~ .tabs__scroller .tabs__label_1 {
     color: var(--black);
 }
 
 input:hover#tab-1 ~ .tabs__scroller .tabs__label_1:after,
-input:checked#tab-1 ~ .tabs__scroller .tabs__label_1:after 
-{
+input:checked#tab-1 ~ .tabs__scroller .tabs__label_1:after {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-input:hover#tab-2 ~ .tabs__scroller .tabs__label_2, 
-input:checked#tab-2 ~ .tabs__scroller .tabs__label_2 
-{
+input:hover#tab-2 ~ .tabs__scroller .tabs__label_2,
+input:checked#tab-2 ~ .tabs__scroller .tabs__label_2 {
     color: var(--black);
 }
 
 input:hover#tab-2 ~ .tabs__scroller .tabs__label_2:after,
-input:checked#tab-2 ~ .tabs__scroller .tabs__label_2:after 
-{
+input:checked#tab-2 ~ .tabs__scroller .tabs__label_2:after {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-input:hover#tab-3 ~ .tabs__scroller .tabs__label_3, 
-input:checked#tab-3 ~ .tabs__scroller .tabs__label_3 
-{
+input:hover#tab-3 ~ .tabs__scroller .tabs__label_3,
+input:checked#tab-3 ~ .tabs__scroller .tabs__label_3 {
     color: var(--black);
 }
 
 input:hover#tab-3 ~ .tabs__scroller .tabs__label_3:after,
-input:checked#tab-3 ~ .tabs__scroller .tabs__label_3:after 
-{
+input:checked#tab-3 ~ .tabs__scroller .tabs__label_3:after {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
 input:hover#tab-4 ~ .tabs__scroller .tabs__label_4,
-input:checked#tab-4 ~ .tabs__scroller .tabs__label_4 
-{
+input:checked#tab-4 ~ .tabs__scroller .tabs__label_4 {
     color: var(--black);
 }
 
 input:hover#tab-4 ~ .tabs__scroller .tabs__label_4:after,
-input:checked#tab-4 ~ .tabs__scroller .tabs__label_4:after 
-{
+input:checked#tab-4 ~ .tabs__scroller .tabs__label_4:after {
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-.tabs__content{
+.tabs__content {
     width: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
-.tabs__content_cards{
+.tabs__content_cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 30px;
     background: var(--grey-1);
     padding: 32px 16px 32px 16px;
 }
 
-.tabs__content_component{
+.tabs__content_component {
     background: var(--white);
     position: relative;
 }
@@ -115,7 +131,7 @@ input:checked#tab-4 ~ .tabs__scroller .tabs__label_4:after
 .tabs__content_1,
 .tabs__content_2,
 .tabs__content_3,
-.tabs__content_4{
+.tabs__content_4 {
     display: none;
 }
 

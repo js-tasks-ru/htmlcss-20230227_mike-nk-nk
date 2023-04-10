@@ -1,56 +1,83 @@
-
-.tooltip{
+.tooltip {
     display: inline-block;
     position: relative;
 }
 
-.tooltip__bubble:after{
-    content: "";
+.tooltip__bubble:after {
+    content: '';
     border: 8px solid transparent;
     border-top-color: var(--blue);
     position: absolute;
-    top:calc(100% - 1px);
-    left:50%;
+    top: calc(100% - 1px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
-.tooltip__bubble{
+.tooltip__bubble {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    color:var(--grey-2);
+    color: var(--grey-2);
     background: var(--blue);
+    -webkit-box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
     box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 10px;
     padding: 13px 21px 8px 21px;
     position: absolute;
-    bottom:calc(100% + 9px);
-    left:50%;
+    bottom: calc(100% + 9px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
-    transform: scale(0,0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+
+@-webkit-keyframes kf-tooltip {
+    0% {
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+    }
+    20% {
+        -webkit-transform: translateX(-50%) scale(0.2, 0.2);
+        transform: translateX(-50%) scale(0.2, 0.2);
+    }
+    100% {
+        -webkit-transform: translateX(-50%) scale(1, 1);
+        transform: translateX(-50%) scale(1, 1);
+    }
 }
 
 @keyframes kf-tooltip {
-    0% { 
-        transform: scale(0,0);
-    }  
-    20% { 
+    0% {
+        -webkit-transform: scale(0, 0);
+        transform: scale(0, 0);
+    }
+    20% {
+        -webkit-transform: translateX(-50%) scale(0.2, 0.2);
         transform: translateX(-50%) scale(0.2, 0.2);
-    } 
+    }
     100% {
+        -webkit-transform: translateX(-50%) scale(1, 1);
         transform: translateX(-50%) scale(1, 1);
     }
 }
 
 .tooltip__trigger:hover ~ .tooltip__bubble,
-.tooltip__trigger[demo] ~ .tooltip__bubble{
+.tooltip__trigger[demo] ~ .tooltip__bubble {
+    -webkit-transform-origin: bottom;
     transform-origin: bottom;
-    transform: scale(1,1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    -webkit-animation: kf-tooltip 0.5s;
     animation: kf-tooltip 0.5s;
 }
-

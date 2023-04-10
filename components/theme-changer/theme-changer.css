@@ -1,12 +1,16 @@
-.theme-changer{
-    display: flex; 
+.theme-changer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     gap: 16px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
- }
+}
 
- .theme-changer__icon{
-     width: 24px;
-     height: 24px;
-     color: var(--grey-3);
-     cursor: pointer;
- }
+.theme-changer__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--grey-3);
+    cursor: pointer;
+}

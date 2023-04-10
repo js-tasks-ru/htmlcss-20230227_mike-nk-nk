@@ -1,28 +1,32 @@
-
-
 .logo {
     display: block;
     height: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 8px;
 }
 
-.logo__rect{
-    width:30px;
-    height:30px;
+.logo__rect {
+    width: 30px;
+    height: 30px;
     background: var(--black);
 }
 
-.logo__circle{
-    width:32px;
-    height:32px;
+.logo__circle {
+    width: 32px;
+    height: 32px;
     border-radius: 16px;
     background: var(--black);
 }
 
-.logo__triangle{
+.logo__triangle {
     width: 0;
     height: 0;
     border-style: solid;

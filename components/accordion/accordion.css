@@ -1,6 +1,6 @@
 /* Стилизация аккордеона */
 
-.accordion{
+.accordion {
     display: block;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -12,9 +12,9 @@
 
 /* можно вынести и в  accordion__item.css, accordion__summary.css*/
 
-.accordion__item{
+.accordion__item {
     display: block;
-    color: var(--grey-4); 
+    color: var(--grey-4);
     border: 1px solid var(--grey-3);
     border-radius: 8px;
     padding: 24px 32px 24px 32px;
@@ -31,46 +31,44 @@
     padding-bottom: 8px;
 }
 
-.accordion__summary{
+.accordion__summary {
     position: relative;
-    color: var(--black); 
+    color: var(--black);
     list-style: none;
     background: var(--white);
 }
 
-.accordion__summary-icon-open{
+.accordion__summary-icon-open {
     position: absolute;
     top: 0;
     right: 0;
     cursor: pointer;
 }
 
-.accordion__summary-icon-close{
+.accordion__summary-icon-close {
     position: absolute;
     top: 0;
     right: 0;
     cursor: pointer;
 }
 
-details[open] .accordion__summary-icon-close{
+details[open] .accordion__summary-icon-close {
     display: inline-block;
 }
 
-details:not([open]) .accordion__summary-icon-close{
+details:not([open]) .accordion__summary-icon-close {
     display: none;
 }
 
-
-details[open] .accordion__summary-icon-open{
+details[open] .accordion__summary-icon-open {
     display: none;
 }
 
-details:not([open]) .accordion__summary-icon-open{
+details:not([open]) .accordion__summary-icon-open {
     display: inline-block;
 }
 
 .accordion__summary::marker {
-    content: "";
+    content: '';
     display: none;
 }
-
