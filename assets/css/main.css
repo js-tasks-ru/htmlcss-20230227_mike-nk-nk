@@ -23,6 +23,7 @@
 @import '../../components/calendar/calendar.css';
 @import '../../components/skeleton/skeleton.css';
 @import '../../components/accordion/accordion.css';
+@import './prism.css';
 
 :root {
     --white: #ffffff;
@@ -52,7 +53,8 @@
     --blue-3: #92a6f6;
 
     --background-linear-gradient-gray: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
-
+    
+    --prism-background: white;
 }
 
 html[data-theme-dark]{
@@ -76,9 +78,9 @@ html[data-theme-dark]{
     --blue-2: #b4c2fc;
     --blue-3: #dae0f5;
 
-    /*test*/
-    background: var(--white);
-    color: var(--black);
+    --prism-background: lightgray;
+   
+       
 }
 
 

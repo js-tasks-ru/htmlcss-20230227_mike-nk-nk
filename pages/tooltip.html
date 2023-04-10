@@ -91,7 +91,7 @@
 
                         <div class="tabs__content tabs__content_component">
                             <div class="tabs__content_1 content__code">
-                                <pre><code>
+                                <pre><code class="language-html">
 &lt;div class=&quot;tooltip&quot;&gt;
     &lt;div class=&quot;tooltip__trigger&quot; demo&gt;
         &lt;svg&gt;
@@ -103,7 +103,7 @@
                                 </code></pre>
                             </div>
                             <div class="tabs__content_2 content__code">
-                                <pre><code>
+                                <pre><code class="language-css">
 .tooltip{
     display: inline-block;
     position: relative;
@@ -135,13 +135,28 @@
     bottom:calc(100% + 9px);
     left:50%;
     transform: translateX(-50%);
-    display: none;
+    transform: scale(0,0);
     user-select: none;
+}
+
+@keyframes kf-tooltip {
+    0% { 
+        transform: scale(0,0);
+    }  
+    20% { 
+        transform: translateX(-50%) scale(0.2, 0.2);
+    } 
+    100% {
+        transform: translateX(-50%) scale(1, 1);
+    }
 }
 
 .tooltip__trigger:hover ~ .tooltip__bubble,
 .tooltip__trigger[demo] ~ .tooltip__bubble{
-    display: block;
+    transform-origin: bottom;
+    transform: scale(1,1);
+    transform: translateX(-50%);
+    animation: kf-tooltip 0.5s;
 }
                                 </code></pre>
                             </div>
@@ -159,5 +174,6 @@
     <script defer src="../components/theme-changer/theme-changer.js"></script>
     <script defer src="../components/burger-menu/burger-menu.js"></script>
     <script defer src="../components/modal/modal.js"></script>
+    <script defer src="../scripts/prism.js"></script>
     
 </html>
