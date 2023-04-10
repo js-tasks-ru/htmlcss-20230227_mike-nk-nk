@@ -7,6 +7,23 @@
 @import '../../components/content/content.css';
 @import '../../components/page/page.css';
 @import '../../components/card/card.css';
+@import '../../components/logo/logo.css';
+@import '../../components/tabs/tabs.css';
+@import '../../components/toggler/toggler.css';
+@import '../../components/theme-changer/theme-changer.css';
+@import '../../components/burger-menu/burger-menu.css';
+@import '../../components/tooltip/tooltip.css';
+@import '../../components/input/input.css';
+@import '../../components/modal/modal.css';
+@import '../../components/button/button.css';
+@import '../../components/histogram/histogram.css';
+@import '../../components/avatar/avatar.css';
+@import '../../components/radio/radio.css';
+@import '../../components/checkbox/checkbox.css';
+@import '../../components/calendar/calendar.css';
+@import '../../components/skeleton/skeleton.css';
+@import '../../components/accordion/accordion.css';
+@import './prism.css';
 
 :root {
     --white: #ffffff;
@@ -18,7 +35,8 @@
     --grey-1: #F8F9FA;
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
-    --grey-4: #495057;
+    --grey-4: #4e5154;
+    --grey-5: #495057;
 
     --error: var(--red);
     --success: var(--blue);
@@ -33,10 +51,42 @@
     --black-2: #495057;
 
     --blue-2: #4263EB;
+    --blue-3: #92a6f6;
 
     --background-linear-gradient-gray: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
-
+    
+    --prism-background: white;
 }
+
+html[data-theme-dark]{
+
+    --white: #000000;
+    --black: #FFFFFF;
+    --pink: #fbb3cc;
+    --purple: #b3a1ec;
+    --blue: #4765fa;
+    --red: #f88686;
+    
+    --grey-5: #ebeff3;
+    --grey-4: #eff5fb;
+    --grey-3: #DDE2E5;
+    --grey-2: #ACB5BD;
+    --grey-1: #495057;
+
+    --primary-hover: #e3e7f7;
+    --secondary-hover: #cfc2fa;
+
+    --black-2: #DDE2E5;
+
+    --blue-2: #b4c2fc;
+    --blue-3: #3f68fa;
+
+    --prism-background: lightgray;
+   
+       
+}
+
+
 
 * {
     font-family: 'Roboto', sans-serif;

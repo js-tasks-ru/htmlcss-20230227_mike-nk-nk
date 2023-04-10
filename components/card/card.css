@@ -1,7 +1,180 @@
-.card{
+.card {
+    color: var(--black);
+    display: block;
     width: 350px;
     height: 367px;
     background: var(--white);
-    box-shadow: 0px 2px 4px var(--gray-4);
+    -webkit-box-shadow: 0px 2px 4px var(--grey-4);
+    box-shadow: 0px 2px 4px var(--grey-4);
     border-radius: 12px;
+}
+
+a.card {
+    text-decoration: none;
+}
+
+.card_big {
+    width: 100%;
+    height: auto;
+    background: var(--grey-1);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.card svg {
+    width: 24px;
+    height: 24px;
+}
+
+.card__container {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card__content-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 16px;
+}
+
+.card__content-center_avatar {
+    width: 90%;
+}
+
+.card__content-resize {
+    width: 80%;
+    height: 60%;
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 16px;
+}
+
+.card__title {
+    margin-bottom: 0;
+}
+
+.card__info {
+    margin-bottom: 30px;
+}
+
+.card__content-modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    border: 1px solid var(--grey-3);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.card__content-modal input {
+    width: 60%;
+}
+
+.card__content-close-button {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.card__content-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+}
+
+.card__content-grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 32px 128px;
+    justify-items: left;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card__content-grid4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 32px;
+    justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.card__content-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .card__content-grid3,
+    .card__content-grid4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card__content-calendar {
+    width: 100%;
+    -webkit-transform: scale(0.7) translateY(-20%);
+    transform: scale(0.7) translateY(-20%);
+}
+
+.card__container-big {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.card__title-big {
+    color: var(--grey-3);
 }

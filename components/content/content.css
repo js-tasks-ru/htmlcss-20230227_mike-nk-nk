@@ -1,9 +1,134 @@
-.content{
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     gap: 30px;
-    padding-top: 68px;
-    background-color: var(--grey-1);
+    background: var(--grey-1);
+}
+
+.content svg {
+    width: 24px;
+    height: 24px;
+}
+
+.content_component {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.content__menu {
+    width: 180px;
+    margin: 24px 16px 16px 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 4px;
+}
+
+@media (max-width: 768px) {
+    .content__menu {
+        display: none;
+    }
+}
+
+.content__menu-item {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.content__menu-item[selected] {
+    color: var(--red);
+}
+
+.content__data {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    background: var(--white);
+    margin: 16px;
+    padding-bottom: 16px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 2px 4px var(--grey-4);
+    box-shadow: 0px 2px 4px var(--grey-4);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.content__view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 8px 32px 24px 16px;
+}
+
+.content__view-tooltip {
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin-top: 48px;
+}
+
+.content__view-w50 {
+    width: 50%;
+}
+
+.content__view-grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 32px 128px;
+    justify-items: left;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .content__view-grid3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content__view-elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 32px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.content__code {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 0px;
+    overflow: auto;
+    white-space: nowrap;
 }
